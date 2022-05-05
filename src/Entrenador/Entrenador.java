@@ -10,7 +10,7 @@ public class Entrenador {
     private String nombre;
     private int pokeDollar;
 
-    Entrenador(ArrayList equipoPokemon, int cajas, String nombre,
+    Entrenador(ArrayList<Pokemon> equipoPokemon, ArrayList<Pokemon> cajas, String nombre,
             float pokeDollar) {
         this.equipoPokemon = equipoPokemon;
         this.caja = cajas;
@@ -47,8 +47,8 @@ public class Entrenador {
         this.nombre = nombre;
     }
 
-    public void setPokeDollar(int pokeDollar) {
-        this.pokeDollar = pokeDollar;
+    public void setPokeDollar(double d) {
+        this.pokeDollar = d;
     }
 
     public boolean dejarPokemon(int numero) {
@@ -56,7 +56,6 @@ public class Entrenador {
             System.out.println("Tines que tener minimo un Pokemon, no puedes dejar el ultimo");
             return false;
         }
-
         else {
             this.caja.add(this.equipoPokemon.get(numero);
             return true;
