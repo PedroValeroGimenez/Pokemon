@@ -1,6 +1,6 @@
 package Pokemon;
 
-public class MovMejora {
+public class MovMejora extends Movimiento {
 
     private Mejoras mejoras;
     private int numeroTurnos;
@@ -13,12 +13,30 @@ public class MovMejora {
         return numeroTurnos;
     }
 
+    @Override
+    public int getPotenciaAtaque() {
+        return super.getPotenciaAtaque();
+    }
+
+    @Override
+    public TipoEnum getTipoMovimiento() {
+        return super.getTipoMovimiento();
+    }
+
     public void setMejoras(Mejoras mejoras) {
         this.mejoras = mejoras;
     }
 
     public void setNumeroTurnos(int numeroTurnos) {
         this.numeroTurnos = numeroTurnos;
+    }
+
+    @Override
+    public void setPotenciaAtaque(int potenciaAtaque) {
+    }
+
+    @Override
+    public void setTipoMovimiento(TipoEnum tipoMovimiento) {
     }
 
 }

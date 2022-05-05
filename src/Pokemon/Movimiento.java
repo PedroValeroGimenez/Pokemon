@@ -4,6 +4,7 @@ public class Movimiento {
 
     protected static int potenciaAtaque;
     private TipoEnum tipoMovimiento;
+    
 
     public int getPotenciaAtaque() {
         return potenciaAtaque;
