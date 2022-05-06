@@ -13,13 +13,13 @@ public class MainPrueba {
 
         System.out.println(pokemon1.getAtaque());
 
-        pokemon1.ventajaODesventaja(pokemon1, pokemon2);
+        System.out.println(pokemon2.ventajaODesventaja(pokemon1));
 
-       System.out.println(pokemon2.getEstamina());
+        
 
-        pokemon2.descansar();
+        
 
-        System.out.println(pokemon2.getEstamina());
+        
 
     }
 }

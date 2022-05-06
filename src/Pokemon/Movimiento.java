@@ -2,7 +2,7 @@ package Pokemon;
 
 public class Movimiento {
 
-    protected static int potenciaAtaque;
+    protected int potenciaAtaque;
     private TipoEnum tipoMovimiento;
     
 
@@ -14,9 +14,9 @@ public class Movimiento {
         return tipoMovimiento;
     }
 
-    public void setPotenciaAtaque(int potenciaAtaque) {
-        Movimiento.potenciaAtaque = potenciaAtaque;
-    }
+   public void setPotenciaAtaque(int potenciaAtaque) {
+       this.potenciaAtaque = potenciaAtaque;
+   }
 
     public void setTipoMovimiento(TipoEnum tipoMovimiento) {
         this.tipoMovimiento = tipoMovimiento;
