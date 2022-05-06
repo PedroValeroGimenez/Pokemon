@@ -1,20 +1,30 @@
 package Entrenador;
 
+import java.util.ArrayList;
+
 public class Combate {
     private Entrenador entrenador;
     private Entrenador ganador;
     private Entrenador rival;
     private int turno;
-    private int koEntrenador;
-    private int koRival;
+    private ArrayList<Turno> turnos;
+    private int koEntrenador = 0;
+    private int koRival = 0;
+    private Pokemon pokemonrival;
+    private Pokemon mipokemon;
 
-    Combate(int turno, int koEntrenador, int koRival, Entrenador entrenador, Entrenador rival, Entrenador ganador) {
-        this.turno = 1;
-        this.koEntrenador = 0;
-        this.koRival = 0;
+    Combate(Entrenador entrenador) {
+        crear random
         this.entrenador = entrenador;
-        this.rival = rival;
-        this.ganador = ganador;
+        rival = arrayEntrenadores[random]
+        for(int i = 0; i< 3; i++){
+            pokemo1 = arrayPokemon[random]
+            for(int i = 0; i<= entrenador.getEquipoPokemon()[0].getNivel(); i++){
+                pokemon1.subirnivel();
+            }
+
+            rival[i] = pokemon1;
+        }
     }
 
     public Entrenador getEntrenador() {
@@ -33,10 +43,6 @@ public class Combate {
         return rival;
     }
 
-    public int getTurno() {
-        return turno;
-    }
-
     public void setEntrenador(Entrenador entrenador) {
         this.entrenador = entrenador;
     }
@@ -53,27 +59,26 @@ public class Combate {
         this.rival = rival;
     }
 
-    public void setTurno(int turno) {
-        this.turno = turno;
-    }
-
     public void koCombate() {
-        if (koEntrenador = 4) {
+        if (this.koEntrenador == 4) {
             rival = ganador;
-        }
-        else {
-            (koRival = 4)
+        } else if (this.koRival == 4) {
             entrenador = ganador;
-            
+
         }
-       
     }
 
     public void retirarse() {
+        this.entrenador.setPokeDollar((int) (this.entrenador.getPokeDollar() - this.entrenador.getPokeDollar() * 0.33));
+        this.rival.setPokeDollar((int) (this.rival.getPokeDollar() + this.rival.getPokeDollar() * 0.33));
+    }
 
-        this.entrenador.setPokeDollar(this.entrenador.getPokeDollar() - this.entrenador.getPokeDollar() * 0.33);
-        this.rival.setPokeDollar(this.rival.getPokeDollar() + this.rival.getPokeDollar() * 0.33);
+    public void ganarExp() {
+        mipokemon.setNivel((mipokemon.getNivel() + pokemonrival * 10) / 4);
+    }
 
+    public void guardarTurno(int turno, ) {
+        Turno turno = new Turno(Turno, movimientoEntrenador, movimientoRival)
     }
 
 }
