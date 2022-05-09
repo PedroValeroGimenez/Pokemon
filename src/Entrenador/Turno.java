@@ -4,16 +4,12 @@ public class Turno {
     private int turno;
     private String movimientoEntrenador;
     private String movimientoRival;
-    private String texto;
 
-    Turno(int Turno, String movimientoEntrenador, String movimientoRival) {
-        this.turno = Turno;
+    public Turno(int turno, String movimientoEntrenador, String movimientoRival) {
+        this.turno = turno;
         this.movimientoEntrenador = movimientoEntrenador;
         this.movimientoRival = movimientoRival;
-        this.texto = texto;
 
-        texto = "Turno: " + getTurno() + \n + mipokemon.getNombre() + "uso: " + movimientoEntrenador.getNombre() + \n + pokemonrival.getNombre() + " usó: "
-        + movimientoRival.getNombre();
     }
 
     public String getMovimientoEntrenador() {
@@ -25,7 +21,7 @@ public class Turno {
     }
 
     public int getTurno() {
-        return Turno;
+        return this.turno;
     }
 
     public void setMovimientoEntrenador(String movimientoEntrenador) {
@@ -37,7 +33,7 @@ public class Turno {
     }
 
     public void setTurno(int turno) {
-        Turno = turno;
+        this.turno = turno;
     }
 
 }
