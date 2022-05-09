@@ -2,10 +2,15 @@ package Pokemon;
 
 public class Movimiento {
 
+    private String nombreMovimiento;
     protected int potenciaAtaque;
     private TipoEnum tipoMovimiento;
     private int estamina;
     
+
+    public String getNombreMovimiento() {
+        return nombreMovimiento;
+    }
 
     public int getPotenciaAtaque() {
         return potenciaAtaque;
@@ -29,6 +34,10 @@ public class Movimiento {
 
     public void setEstamina(int estamina) {
         this.estamina = estamina;
+    }
+    
+    public void setNombreMovimiento(String nombreMovimiento) {
+        this.nombreMovimiento = nombreMovimiento;
     }
     
 }
