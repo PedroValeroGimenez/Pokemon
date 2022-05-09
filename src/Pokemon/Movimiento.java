@@ -4,6 +4,7 @@ public class Movimiento {
 
     protected int potenciaAtaque;
     private TipoEnum tipoMovimiento;
+    private int estamina;
     
 
     public int getPotenciaAtaque() {
@@ -14,6 +15,10 @@ public class Movimiento {
         return tipoMovimiento;
     }
 
+    public int getEstamina() {
+        return estamina;
+    }
+
    public void setPotenciaAtaque(int potenciaAtaque) {
        this.potenciaAtaque = potenciaAtaque;
    }
@@ -22,6 +27,8 @@ public class Movimiento {
         this.tipoMovimiento = tipoMovimiento;
     }
 
-
+    public void setEstamina(int estamina) {
+        this.estamina = estamina;
+    }
     
 }

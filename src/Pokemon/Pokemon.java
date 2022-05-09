@@ -22,8 +22,10 @@ public class Pokemon {
     private int estaminaAct;
     private int nivel;
     private int experiencia;
-    private int fertilidad;
-    private Movimiento[] arrayMovimiento;
+    private int fertilidad = 5;
+    private int fertilidadAct;
+    private Movimiento[] arrayMovimiento = new Movimiento[4];
+    private Movimiento[] movimientosDisponibles;
     private TipoEnum tipo;
     private Estado estado;
 
@@ -46,6 +48,10 @@ public class Pokemon {
         this.tipo = tipo;
         this.estado = estado;
 
+    }
+
+    public Movimiento[] getMovimientosDisponibles() {
+        return movimientosDisponibles;
     }
 
     public int getExperiencia() {
@@ -136,6 +142,14 @@ public class Pokemon {
         return vitalidadAct;
     }
 
+    public int getFertilidadAct() {
+        return fertilidadAct;
+    }
+
+    public void setMovimientosDisponibles(Movimiento[] movimientosDisponibles) {
+        this.movimientosDisponibles = movimientosDisponibles;
+    }
+
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
     }
@@ -224,19 +238,22 @@ public class Pokemon {
         this.vitalidadAct = vitalidadAct;
     }
 
+    public void setFertilidadAct(int fertilidadAct) {
+        this.fertilidadAct = fertilidadAct;
+    }
+
     public void subirNivel() {
 
         Random rnd = new Random();
-        int puntosAleatorios = rnd.nextInt(1 - 5);
 
         if (experiencia == nivel * 10) {
 
-            vitalidad = vitalidad + puntosAleatorios;
-            ataque = ataque + puntosAleatorios;
-            defensa = defensa + puntosAleatorios;
-            ataqueEspecial = ataqueEspecial + puntosAleatorios;
-            defEspecial = defEspecial + puntosAleatorios;
-            velocidad = velocidad + puntosAleatorios;
+            vitalidad = vitalidad + rnd.nextInt(5) + 1;
+            ataque = ataque + rnd.nextInt(5) + 1;
+            defensa = defensa + rnd.nextInt(5) + 1;
+            ataqueEspecial = ataqueEspecial + rnd.nextInt(5) + 1;
+            defEspecial = defEspecial + rnd.nextInt(5) + 1;
+            velocidad = velocidad + rnd.nextInt(5) + 1;
 
             nivel++;
 
@@ -254,30 +271,34 @@ public class Pokemon {
 
         int vitalidadAQuitar;
 
-        if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.VENTAJA) {
+        if (this.estamina > movimientoAUsar.getEstamina()) {
 
-            vitalidadAQuitar = pokemonAAtacar.getVitalidad() - (this.getAtaqueAct() * 2) + ataque - defensa;
+            if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.VENTAJA) {
 
-            pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
+                vitalidadAQuitar = (int) (pokemonAAtacar.getVitalidad() - (this.getAtaqueAct() * 1.5) + ataque
+                        - defensa);
 
-        }
+                pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
 
-        else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.NEUTRO) {
+            }
 
-            vitalidadAQuitar = pokemonAAtacar.getVitalidad() - (this.getAtaqueEspecialAct()) + ataque
-                    - defensa;
+            else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.NEUTRO) {
 
-            pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
+                vitalidadAQuitar = pokemonAAtacar.getVitalidad() - (this.getAtaqueEspecialAct()) + ataque
+                        - defensa;
 
-        }
+                pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
 
-        else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.DESVENTAJA) {
+            }
 
-            vitalidadAQuitar = (int) (pokemonAAtacar.getVitalidad() - (this.getAtaqueEspecialAct()*0.5) + ataque
-                    - defensa);
+            else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.DESVENTAJA) {
 
-            pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
+                vitalidadAQuitar = (int) (pokemonAAtacar.getVitalidad() - (this.getAtaqueEspecialAct() * 0.5) + ataque
+                        - defensa);
 
+                pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
+
+            }
         }
 
     }
