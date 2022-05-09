@@ -94,71 +94,48 @@ public class Entrenador {
 
     }
 
-    public boolean entrenamientoPesado(Pokemon pokemon) {
-
-        int comprobador = pokeDollar - (20 * pokemon.getNivel());
-
-        if (comprobador >= 0) {
-
-            pokeDollar = pokeDollar - comprobador;
-            pokemon.setDefensaEspecial() = pokemon.setDefensaEspecial() + 5;
-            pokemon.setDefensa() = pokemon.setDefensa() + 5;
-            pokemon.setVitalidad() = pokemon.setVitalidad() + 5;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public boolean entrenamientoFurioso(Pokemon pokemon) {
+    public void entrenamientoFurioso(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (30 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-            pokemon.setAtaqueEspecial() = pokemon.setAtaqueEspecial() + 5;
-            pokemon.setVelocidad() = pokemon.setVelocidad() + 5;
-            pokemon.getAtaqueEspecial() = pokemon.getAtaqueEspecial() + 5;
-            return true;
-
-        } else {
-            return false;
+            pokemon.setAtaqueEspecial(pokemon.getAtaqueEspecial() + 5);
+            pokemon.setVelocidad(pokemon.getVelocidad() + 5);
+            pokemon.setAtaqueEspecial(pokemon.getAtaqueEspecial() + 5);
         }
+
     }
 
-    public boolean entrenamientoFuncional(Pokemon pokemon) {
+    public void entrenamientoFuncional(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (40 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-            pokemon.setVelocidad() = pokemon.setVelocidad() + 5;
-            pokemon.setAtaque() = pokemon.setAtaque() + 5;
-            pokemon.setDefensa() = pokemon.setDefensa() + 5;
-            pokemon.setVitalidad() = pokemon.setVitalidad() + 5;
-            return true;
+            pokemon.setVelocidad(pokemon.getVelocidad() + 5);
+            pokemon.setAtaque(pokemon.getAtaque() + 5);
+            pokemon.setDefensa(pokemon.getDefensa() + 5);
+            pokemon.setVitalidad(pokemon.getVitalidad() + 5);
 
-        } else {
-            return false;
         }
+
     }
 
-    public boolean entrenamientoOnirico(Pokemon pokemon) {
+    public void entrenamientoOnirico(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (40 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-            pokemon.setVelocidad() = pokemon.setVelocidad() + 5;
-            pokemon.setAtaqueEspecial() = pokemon.setAtaqueEspecial() + 5;
-            pokemon.setDefensaEspecial() = pokemon.setDefensaEspecial() + 5;
-            pokemon.setVitalidad() = pokemon.setVitalidad() + 5;
-            return true;
-        } else {
-            return false;
+            pokemon.setVelocidad(pokemon.getVelocidad() + 5);
+            pokemon.setAtaqueEspecial(pokemon.getAtaqueEspecial() + 5);
+            pokemon.setDefEspecial(pokemon.getDefEspecial() + 5);
+            pokemon.setVitalidad(pokemon.getVitalidad() + 5);
+
         }
 
     }
