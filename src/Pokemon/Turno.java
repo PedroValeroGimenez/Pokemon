@@ -1,4 +1,4 @@
-package Entrenador;
+package pokemon;
 
 public class Turno {
     private int turno;

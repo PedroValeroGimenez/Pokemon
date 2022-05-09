@@ -1,4 +1,4 @@
-package Entrenador;
+package pokemon;
 
 import java.io.BufferedWriter;
 import java.io.File;
