@@ -1,4 +1,4 @@
-package Pokemon;
+package pokemon;
 
 public enum Estado {
 
