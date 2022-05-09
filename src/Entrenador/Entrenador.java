@@ -94,181 +94,72 @@ public class Entrenador {
 
     }
 
-    public void entrenamientoPesado(Pokemon pokemon) {
+    public boolean entrenamientoPesado(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (20 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-
-            if (pokemon.getDefensa() + 5 >= 100)
-
-                pokemon.setDefensa(100);
-
-            else
-
-                pokemon.setDefensa(pokemon.getDefensa() + 5);
-
-            if (pokemon.getDefensaEspecial() + 5 >= 100)
-
-                pokemon.setDefensaEspecial(100);
-
-            else
-
-                pokemon.setDefensaEspecial(pokemon.getDefensaEspecial() + 5);
-
-            if (pokemon.getVitalidad() + 5 >= 100)
-
-                pokemon.setVitalidad(100);
-
-            else
-
-                pokemon.setVitalidad(pokemon.getVitalidad() + 5);
-
+            pokemon.setDefensaEspecial() = pokemon.setDefensaEspecial() + 5;
+            pokemon.setDefensa() = pokemon.setDefensa() + 5;
+            pokemon.setVitalidad() = pokemon.setVitalidad() + 5;
+            return true;
         } else {
-
-            System.out.println("No tienes suficientes pokedollares");
-
+            return false;
         }
-
     }
 
-    public void entrenamientoFurioso(Pokemon pokemon) {
+    public boolean entrenamientoFurioso(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (30 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-
-            if (pokemon.getAtaqueEspecial() + 5 >= 100)
-
-                pokemon.setAtaqueEspecial(100);
-
-            else
-
-                pokemon.setAtaqueEspecial(pokemon.AtaqueEspecial() + 5);
-
-            if (pokemon.getVelocidad() + 5 >= 100)
-
-                pokemon.setVelocidad(100);
-
-            else
-
-                pokemon.setVelocidad(pokemon.getVelocidad() + 5);
-
-            if (pokemon.getAtaque() + 5 >= 100)
-
-                pokemon.setAtaque(100);
-
-            else
-
-                pokemon.setAtaque(pokemon.getAtaque() + 5);
+            pokemon.setAtaqueEspecial() = pokemon.setAtaqueEspecial() + 5;
+            pokemon.setVelocidad() = pokemon.setVelocidad() + 5;
+            pokemon.getAtaqueEspecial() = pokemon.getAtaqueEspecial() + 5;
+            return true;
 
         } else {
-
-            System.out.println("No tienes suficientes pokedollares");
-
+            return false;
         }
     }
 
-    public void entrenamientoFuncional(Pokemon pokemon) {
+    public boolean entrenamientoFuncional(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (40 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-
-            if (pokemon.getVelocidad() + 5 >= 100)
-
-                pokemon.setVelocidad(100);
-
-            else
-
-                pokemon.setVelocidad(pokemon.getVelocidad() + 5);
-
-
-
-            if (pokemon.getAtaque() + 5 >= 100)
-
-                pokemon.setAtaque(100);
-
-            else
-
-                pokemon.setAtaque(pokemon.getAtaque() + 5);
-
-
-
-            if (pokemon.getDefensa() + 5 >= 100)
-
-                pokemon.setDefensa(100);
-
-            else
-
-                pokemon.setDefensa(pokemon.getDefensa() + 5);
-            
-            if (pokemon.getVitalidad() + 5 >= 100)
-
-                pokemon.setVitalidad(100)
-            else 
-
-                pokemon.setVitalidad(pokemon.getVitalidad() + 5);    
-
-
+            pokemon.setVelocidad() = pokemon.setVelocidad() + 5;
+            pokemon.setAtaque() = pokemon.setAtaque() + 5;
+            pokemon.setDefensa() = pokemon.setDefensa() + 5;
+            pokemon.setVitalidad() = pokemon.setVitalidad() + 5;
+            return true;
 
         } else {
-
-            System.out.println("No tienes suficientes pokedollares");
-
+            return false;
         }
+    }
 
-    public void entrenamientoOnirico(Pokemon pokemon) {
+    public boolean entrenamientoOnirico(Pokemon pokemon) {
 
         int comprobador = pokeDollar - (40 * pokemon.getNivel());
 
         if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-
-            if (pokemon.getVelocidad() + 5 >= 100)
-
-                pokemon.setVelocidad(100);
-
-            else
-
-                pokemon.setVelocidad(pokemon.getVelocidad() + 5);
-
-            if (pokemon.getAtaqueEspecial() + 5 >= 100)
-
-                pokemon.setAtaqueEspecial(100);
-
-            else
-
-                pokemon.setAtaqueEspecial(pokemon.getAtaqueEspecial() + 5);
-
-            if (pokemon.getDefensaEspecial() + 5 >= 100)
-
-                pokemon.setDefensaEspecial(100);
-
-            else
-
-                pokemon.setDefensaEspecial(pokemon.getDefensaEspecial() + 5);
-
-            if (pokemon.getVitalidad() + 5 >= 100)
-
-                pokemon.setVitalidad(100);
-
-            else
-
-                pokemon.setVitalidad(pokemon.getVitalidad() + 5);
-
+            pokemon.setVelocidad() = pokemon.setVelocidad() + 5;
+            pokemon.setAtaqueEspecial() = pokemon.setAtaqueEspecial() + 5;
+            pokemon.setDefensaEspecial() = pokemon.setDefensaEspecial() + 5;
+            pokemon.setVitalidad() = pokemon.setVitalidad() + 5;
+            return true;
         } else {
-
-            System.out.println("No tienes suficientes pokedollares");
-
+            return false;
         }
-    }
 
+    }
 }

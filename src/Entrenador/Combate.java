@@ -81,11 +81,10 @@ public class Combate {
     }
 
     public void ganarExp() {
-        mipokemon.setNivel((mipokemon.getNivel() + pokemonrival * 10) / 4);
+        mipokemon.setNivel((mipokemon.getNivel() + pokemonrival.getNivel() * 10) / 4);
     }
 
-    public void guardarTurno(int turno, ) {
-        Turno turno = new Turno(Turno, movimientoEntrenador, movimientoRival)
+    public void guardarTurno(int turno) {
+        Turno turno = new Turno(Turno, movimientoEntrenador, movimientoRival);
     }
-
 }
