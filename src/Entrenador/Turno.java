@@ -10,7 +10,7 @@ public class Turno {
         this.turno = Turno;
         this.movimientoEntrenador = movimientoEntrenador;
         this.movimientoRival = movimientoRival;
-        this.tex
+        this.texto = texto;
 
         texto = "Turno: " + getTurno() + \n + mipokemon.getNombre() + "uso: " + movimientoEntrenador.getNombre() + \n + pokemonrival.getNombre() + " usó: "
         + movimientoRival.getNombre();

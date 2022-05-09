@@ -1,6 +1,7 @@
 package Entrenador;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Combate {
     private Entrenador entrenador;
@@ -14,7 +15,13 @@ public class Combate {
     private Pokemon mipokemon;
 
     Combate(Entrenador entrenador) {
-        crear random
+
+        Random rndm = new Random();
+        this.entrenador = entrenador;
+        rival = 
+
+
+        /*crear random
         this.entrenador = entrenador;
         rival = arrayEntrenadores[random]
         for(int i = 0; i< 3; i++){
@@ -24,7 +31,7 @@ public class Combate {
             }
 
             rival[i] = pokemon1;
-        }
+        }*/
     }
 
     public Entrenador getEntrenador() {
