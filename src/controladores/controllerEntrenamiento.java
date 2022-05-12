@@ -16,6 +16,38 @@ import javafx.stage.StageStyle;
 
 public class ControllerEntrenamiento implements Initializable{
 
+    @FXML
+    private Button EntrenamientoFurioso;
+    private Button EntrenamientoFuncional;
+    private Button EntrenamientoOnirico;
+
+    @FXML
+
+    private void entrenamientoFurioso(ActionEvent event) throws IOException {
+        
+        System.out.println("EntrenamientoFurioso!");
+
+
+    }
+
+    @FXML
+
+    private void entrenamientoFuncional(ActionEvent event) throws IOException {
+        
+        System.out.println("EntrenamientoFuncional!");
+
+
+    }
+
+    @FXML
+
+    private void entrenamientoOnirico(ActionEvent event) throws IOException {
+        
+        System.out.println("EntrenamientoOnirico!");
+
+
+    }
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         

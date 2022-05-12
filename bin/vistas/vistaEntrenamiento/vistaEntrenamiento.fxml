@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -51,6 +52,9 @@
                   <Image url="@oak.gif" />
                </image>
             </ImageView>
+            <Button fx:id="btnEntrenamientoFurioso" layoutX="46.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoFurioso" prefHeight="57.0" prefWidth="138.0" text="EntrenamientoFurioso" />
+            <Button fx:id="btnEntrenamientoFuncional" layoutX="248.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoFuncional" prefHeight="57.0" prefWidth="145.0" text="EntrenamientoFuncional" />
+            <Button fx:id="btnEntrenamientoOnirico" layoutX="442.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoOnirico" prefHeight="57.0" prefWidth="145.0" text="EntrenamientoOnirico" />
          </children>
     </AnchorPane>
   </children>
