@@ -1,5 +1,7 @@
 package pokemon;
 
+
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +10,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
 
+import javafx.application.Application;
+import javafx.stage.Stage;
+
 public class Combate {
+     
+
     public static final String PATH = "./log/combate.log";
     private Entrenador entrenador;
     private Entrenador ganador;
