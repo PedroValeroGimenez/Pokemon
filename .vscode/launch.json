@@ -14,9 +14,10 @@
             "type": "java",
             "name": "Launch MainPrueba",
             "request": "launch",
-            "mainClass": "MainPrueba",
+            "mainClass": "pokemon.MainPrueba",
             "projectName": "Pokemon-1_7db42776",
-            "vmArgs": "--module-path=C:/Users/Ja1me/Desktop/javafx-sdk-18.0.1/lib --add-modules=javafx.controls,javafx.fxml"
+            //Al cambiar de ordenador habrá que cambiar la ruta donde se encuentran los ficheros .jar de la libreria.
+            "vmArgs": "--module-path=C:/Users/jaime/Desktop/javafx-sdk-18.0.1/lib --add-modules=javafx.fxml,javafx.controls"
         }
     ]
 }
