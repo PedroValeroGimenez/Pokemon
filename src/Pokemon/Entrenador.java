@@ -10,7 +10,7 @@ public class Entrenador {
     private String nombre;
     private int pokeDollar;
 
-    Entrenador(ArrayList<Pokemon> equipoPokemon, ArrayList<Pokemon> caja, String nombre,
+    protected Entrenador(ArrayList<Pokemon> equipoPokemon, ArrayList<Pokemon> caja, String nombre,
             int pokeDollar) {
         this.equipoPokemon = equipoPokemon;
         this.caja = caja;
