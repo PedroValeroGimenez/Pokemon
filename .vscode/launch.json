@@ -4,14 +4,14 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-      
+        
         {
             "type": "java",
-            "name": "Launch MainPrueba",
+            "name": "Launch",
             "request": "launch",
             "mainClass": "pokemon.MainPrueba",
             "projectName": "Pokemon",
-            "vmArgs": "--module-path=C:/Users/Ja1me/Desktop/javafx-sdk-18.0.1/lib --add-modules=javafx.fxml,javafx.controls"
+            "vmArgs": "--module-path=C:/Users/jaime/Desktop/javafx-sdk-18.0.1/lib --add-modules=javafx.fxml,javafx.controls,javafx.media"
         }
     ]
 }

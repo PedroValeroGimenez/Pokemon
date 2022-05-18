@@ -1,7 +1,5 @@
 package pokemon;
 
-
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -14,7 +12,6 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class Combate {
-     
 
     public static final String PATH = "./log/combate.log";
     private Entrenador entrenador;
@@ -89,9 +86,8 @@ public class Combate {
         }
     }
 
-    public void retirarse() {
-        this.entrenador.setPokeDollar((int) (this.entrenador.getPokeDollar() - this.entrenador.getPokeDollar() * 0.33));
-        this.rival.setPokeDollar((int) (this.rival.getPokeDollar() + this.rival.getPokeDollar() * 0.33));
+    public void retirarse(Entrenador miEntrenador) {
+        miEntrenador.setPokeDollar((int) (miEntrenador.getPokeDollar() - miEntrenador.getPokeDollar() * 0.33));
     }
 
     public void ganarExp() {

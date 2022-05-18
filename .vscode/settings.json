@@ -1,31 +1,38 @@
 {
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.base.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.controls.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.fxml.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.graphics.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.media.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.swing.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx.web.jar",
-        "c:\\Users\\jaime\\Desktop\\lib\\javafx-swt.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.fxml.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.graphics.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.media.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
-        "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.fxml.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.graphics.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.media.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
-        "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar"
-    ]
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.base.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.controls.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.fxml.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.graphics.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.media.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.swing.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx.web.jar",
+            "c:\\Users\\jaime\\Desktop\\lib\\javafx-swt.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.fxml.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.graphics.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.media.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
+            "c:\\Users\\Ja1me\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.fxml.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.graphics.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.media.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar",
+            "c:\\Users\\jaime\\Desktop\\mysql-connector-java-8.0.27.jar"
+        ],
+        "exclude": [
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx-base-19-ea+6-linux.jar",
+            "c:\\Users\\jaime\\Desktop\\javafx-sdk-18.0.1\\lib\\javafx-base-19-ea+6.jar"
+        ]
+    }
 }

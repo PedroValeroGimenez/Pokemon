@@ -10,7 +10,7 @@ public class Entrenador {
     private String nombre;
     private int pokeDollar;
 
-    protected Entrenador(ArrayList<Pokemon> equipoPokemon, ArrayList<Pokemon> caja, String nombre,
+    public Entrenador(ArrayList<Pokemon> equipoPokemon, ArrayList<Pokemon> caja, String nombre,
             int pokeDollar) {
         this.equipoPokemon = equipoPokemon;
         this.caja = caja;
@@ -85,7 +85,7 @@ public class Entrenador {
 
         if (random == 1 || random == 2) {
             System.out.println("El pokemon ha sido capturado");
-            this.caja.add(pokemon);
+            // this.caja.add(pokemon);  No funciona el controlador de captura si esta linea no esta comentada.
             return true;
         } else {
             System.out.println("El Pokemon no ha sido capturado");
@@ -98,13 +98,13 @@ public class Entrenador {
 
         int comprobador = pokeDollar - (30 * pokemon.getNivel());
 
-        if (comprobador >= 0) {
+        //if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
-            pokemon.setAtaqueEspecial(pokemon.getAtaqueEspecial() + 5);
+            pokemon.setAtaque(pokemon.getAtaque() + 5);
             pokemon.setVelocidad(pokemon.getVelocidad() + 5);
             pokemon.setAtaqueEspecial(pokemon.getAtaqueEspecial() + 5);
-        }
+        //}
 
     }
 
@@ -112,7 +112,7 @@ public class Entrenador {
 
         int comprobador = pokeDollar - (40 * pokemon.getNivel());
 
-        if (comprobador >= 0) {
+        //if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
             pokemon.setVelocidad(pokemon.getVelocidad() + 5);
@@ -120,7 +120,7 @@ public class Entrenador {
             pokemon.setDefensa(pokemon.getDefensa() + 5);
             pokemon.setVitalidad(pokemon.getVitalidad() + 5);
 
-        }
+       // }
 
     }
 
@@ -128,7 +128,7 @@ public class Entrenador {
 
         int comprobador = pokeDollar - (40 * pokemon.getNivel());
 
-        if (comprobador >= 0) {
+        //if (comprobador >= 0) {
 
             pokeDollar = pokeDollar - comprobador;
             pokemon.setVelocidad(pokemon.getVelocidad() + 5);
@@ -136,7 +136,7 @@ public class Entrenador {
             pokemon.setDefEspecial(pokemon.getDefEspecial() + 5);
             pokemon.setVitalidad(pokemon.getVitalidad() + 5);
 
-        }
+        //}
 
     }
 }

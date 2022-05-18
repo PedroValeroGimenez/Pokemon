@@ -50,6 +50,9 @@ public class Pokemon {
 
     }
 
+    public Pokemon(int i, String string, String string2, String string3) {
+    }
+
     public Movimiento[] getMovimientosDisponibles() {
         return movimientosDisponibles;
     }
@@ -271,6 +274,8 @@ public class Pokemon {
 
         int vitalidadAQuitar;
 
+        
+
         if (this.estamina > movimientoAUsar.getEstamina()) {
 
             if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.VENTAJA) {
@@ -299,7 +304,11 @@ public class Pokemon {
                 pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
 
             }
+
+
         }
+
+         
 
     }
 

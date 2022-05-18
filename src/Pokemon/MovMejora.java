@@ -2,6 +2,10 @@ package pokemon;
 
 public class MovMejora extends Movimiento {
 
+    public MovMejora(String nombreMovimiento, int potenciaAtaque, TipoEnum tipoMovimiento, int estamina) {
+        super(nombreMovimiento, potenciaAtaque, tipoMovimiento, estamina);
+    }
+
     private Mejoras mejoras;
     private int numeroTurnos;
 

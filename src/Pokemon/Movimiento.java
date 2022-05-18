@@ -6,6 +6,15 @@ public class Movimiento {
     protected int potenciaAtaque;
     private TipoEnum tipoMovimiento;
     private int estamina;
+
+    public Movimiento(String nombreMovimiento,int potenciaAtaque,TipoEnum tipoMovimiento,int estamina){
+
+        this.nombreMovimiento = nombreMovimiento;
+        this.potenciaAtaque = potenciaAtaque;
+        this.tipoMovimiento = tipoMovimiento;
+        this.estamina = estamina;
+
+    }
     
 
     public String getNombreMovimiento() {

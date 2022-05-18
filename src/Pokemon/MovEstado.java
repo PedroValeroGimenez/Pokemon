@@ -2,6 +2,11 @@ package pokemon;
 
 public class MovEstado extends Movimiento {
 
+    public MovEstado(String nombreMovimiento, int potenciaAtaque, TipoEnum tipoMovimiento, int estamina) {
+        super(nombreMovimiento, potenciaAtaque, tipoMovimiento, estamina);
+        
+    }
+
     private Estado estado;
     private int numeroTurnos;
 

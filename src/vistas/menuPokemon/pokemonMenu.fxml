@@ -59,6 +59,14 @@
                </image>
             </ImageView>
             <Button fx:id="btnCombate" layoutX="21.0" layoutY="276.0" mnemonicParsing="false" onAction="#Combate" prefHeight="38.0" prefWidth="108.0" text="Combate" />
+            <Button fx:id="btnCapturar" layoutX="21.0" layoutY="326.0" mnemonicParsing="false" onAction="#Capturar" prefHeight="38.0" prefWidth="108.0" text="Capturar" />
+            <Button fx:id="play" layoutX="61.0" layoutY="24.0" mnemonicParsing="false" onAction="#play" prefHeight="26.0" prefWidth="47.0" text="Play" />
+            <Button fx:id="stop" layoutX="117.0" layoutY="24.0" mnemonicParsing="false" onAction="#stop" prefHeight="26.0" prefWidth="47.0" text="Stop" />
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Play-Button-PNG-Transparent-Image.png" />
+               </image>
+            </ImageView>
          </children>
     </AnchorPane>
   </children>
