@@ -13,6 +13,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import pokemon.Estado;
+import pokemon.Pokemon;
+import pokemon.TipoEnum;
+import pokemon.Entrenador;
 
 public class ControllerEntrenamiento implements Initializable{
 
@@ -20,13 +24,18 @@ public class ControllerEntrenamiento implements Initializable{
     private Button EntrenamientoFurioso;
     private Button EntrenamientoFuncional;
     private Button EntrenamientoOnirico;
+    private Pokemon miPokemon;
+    private Entrenador entrenador;
 
     @FXML
 
     private void entrenamientoFurioso(ActionEvent event) throws IOException {
         
-        System.out.println("EntrenamientoFurioso!");
+        entrenador.entrenamientoFurioso(miPokemon);
 
+        System.out.println(miPokemon.getAtaqueEspecial());
+        System.out.println(miPokemon.getVelocidad());
+        System.out.println(miPokemon.getAtaqueEspecial());
 
     }
 
@@ -34,7 +43,7 @@ public class ControllerEntrenamiento implements Initializable{
 
     private void entrenamientoFuncional(ActionEvent event) throws IOException {
         
-        System.out.println("EntrenamientoFuncional!");
+        entrenador.entrenamientoFuncional(miPokemon);
 
 
     }
@@ -43,13 +52,16 @@ public class ControllerEntrenamiento implements Initializable{
 
     private void entrenamientoOnirico(ActionEvent event) throws IOException {
         
-        System.out.println("EntrenamientoOnirico!");
+        entrenador.entrenamientoOnirico(miPokemon);
 
 
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
+        miPokemon = new Pokemon("Pikachu", null, 100, 50, 60, 10, 10, 10, 10, 10, 0, null,TipoEnum.AGUA, Estado.SIN_ESTADO);
+        
         
         
     }

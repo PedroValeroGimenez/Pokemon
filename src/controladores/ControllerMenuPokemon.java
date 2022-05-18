@@ -21,12 +21,32 @@ public class ControllerMenuPokemon implements Initializable {
     private Button Entrenamiento;
 
     @FXML
+    private Button Combate;
+
+    @FXML
 
     private void Entrenamiento(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/vistaEntrenamiento/vistaEntrenamiento.fxml"));
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("../vistas/vistaEntrenamiento/vistaEntrenamiento.fxml"));
         Parent root = loader.load();
 
         ControllerEntrenamiento corntrolador = loader.getController();
+
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.showAndWait();
+    }
+
+    @FXML
+
+    private void Combate(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+            getClass().getResource("../vistas/vistaCombate/vistaCombate.fxml"));
+        Parent root = loader.load();
+
+        ControllerCombate controlador1 = loader.getController();
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();

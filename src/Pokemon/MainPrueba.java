@@ -16,6 +16,12 @@ public class MainPrueba extends Application {
 
     public static void main(String[] args) {
 
+        Combate c = new Combate();
+        Turno t1 = new Turno(1,"Squirte usa pistola agua", "Charmander usa ascuas");
+
+        c.addTurno(t1);
+        c.escribirCombate();
+
         launch(args);
 
     }
