@@ -26,7 +26,7 @@ public class ControllerMenuPokemon implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/vistaEntrenamiento/vistaEntrenamiento.fxml"));
         Parent root = loader.load();
 
-        ControllerEntrenamiento controlador = loader.getController();
+        ControllerEntrenamiento corntrolador = loader.getController();
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
