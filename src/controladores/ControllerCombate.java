@@ -49,6 +49,18 @@ public class ControllerCombate implements Initializable {
     private Button btnAtacar;
 
     @FXML
+    private Button btnMov1;
+
+    @FXML
+    private Button btnMov2;
+
+    @FXML
+    private Button btnMov3;
+
+    @FXML
+    private Button btnMov4;
+
+    @FXML
 
     private javafx.scene.control.Button btnHuir;
 
@@ -61,12 +73,25 @@ public class ControllerCombate implements Initializable {
     private Movimiento movPrueba;
     private Entrenador entrenador;
 
+    
+
     @FXML
 
     private void Atacar(ActionEvent event) throws IOException {
 
-        miPokemon.atacar(rivalPokemon, movPrueba);
-        txLog.setText("La vitalidad de " + rivalPokemon.getNombre() + " es " + rivalPokemon.getVitalidad());
+        // miPokemon.atacar(rivalPokemon, movPrueba);
+        
+
+        this.btnAtacar.setVisible( false );
+        this.btnHuir.setVisible( true );
+
+        this.btnMov1.setOpacity(1);
+        this.btnMov2.setOpacity(1);
+        this.btnMov3.setOpacity(1);
+        this.btnMov4.setOpacity(1);
+        
+
+        //txLog.setText("La vitalidad de " + rivalPokemon.getNombre() + " es " + rivalPokemon.getVitalidad());
 
     }
 
@@ -83,6 +108,8 @@ public class ControllerCombate implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
+        
 
         miPokemon = new Pokemon("pikachu", null, 100, 0, 0, 0, 0, 0, 200, 0, 0, null, null, null);
         rivalPokemon = new Pokemon("Squirtle", null, 200, 0, 0, 0, 0, 0, 200, 0, 0, null, null, null);

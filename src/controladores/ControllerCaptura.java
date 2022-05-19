@@ -87,6 +87,7 @@ public class ControllerCaptura implements Initializable {
 
 
         pokemonACapturar = new Pokemon("Squirtle", null, 100, 100, 100, 100, 100, 100, 100, 100, 100, null, TipoEnum.AGUA, Estado.SIN_ESTADO);
+        
         entrenador = new Entrenador(null, null, "Jaime", 20000);
     }
 

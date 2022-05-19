@@ -48,13 +48,17 @@
                   <Image url="@escenario.png" />
                </image>
             </ImageView>
-            <AnchorPane layoutX="388.0" layoutY="303.0" prefHeight="142.0" prefWidth="365.0">
+            <AnchorPane layoutX="260.0" layoutY="282.0" prefHeight="142.0" prefWidth="504.0">
                <children>
-                  <Button fx:id="btnAtacar" layoutX="133.0" layoutY="47.0" mnemonicParsing="false" onAction="#Atacar" prefHeight="48.0" prefWidth="98.0" text="Atacar" />
-                  <Button fx:id="btnHuir" layoutX="253.0" layoutY="47.0" mnemonicParsing="false" onAction="#Huir" prefHeight="48.0" prefWidth="98.0" text="Huir" />
+                  <Button fx:id="btnAtacar" layoutX="279.0" layoutY="47.0" mnemonicParsing="false" onAction="#Atacar" prefHeight="48.0" prefWidth="98.0" text="Atacar" />
+                  <Button fx:id="btnHuir" layoutX="391.0" layoutY="47.0" mnemonicParsing="false" onAction="#Huir" prefHeight="48.0" prefWidth="98.0" text="Huir" />
+                  <Button fx:id="btnMov1" layoutX="35.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="106.0" text="Button" />
+                  <Button fx:id="btnMov2" layoutX="151.0" layoutY="14.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="106.0" text="Button" />
+                  <Button fx:id="btnMov3" layoutX="35.0" layoutY="71.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="106.0" text="Button" />
+                  <Button fx:id="btnMov4" layoutX="151.0" layoutY="71.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="106.0" text="Button" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="318.0" fitWidth="300.0" layoutX="76.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="318.0" fitWidth="300.0" layoutX="22.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Empoleon_espalda_G5.gif" />
                </image>

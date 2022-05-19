@@ -15,7 +15,7 @@ public class Entrenador {
         this.equipoPokemon = equipoPokemon;
         this.caja = caja;
         this.nombre = nombre;
-        this.pokeDollar = (int) (Math.random() * 1000 + 800); // TODO: hacer cálculo entre 800 y 1000
+        this.pokeDollar = (int) (Math.random() * 1000 + 800);
 
     }
 
@@ -80,12 +80,12 @@ public class Entrenador {
     }
 
     public boolean capturarPokemon(Pokemon pokemon) {
-        int random = (int) (Math.random() * 3); // TODO: Calcular número entre 1 y 3
+        int random = (int) (Math.random() * 3);
         System.out.println("Has lanzado una Pokeball");
 
         if (random == 1 || random == 2) {
             System.out.println("El pokemon ha sido capturado");
-            // this.caja.add(pokemon);  No funciona el controlador de captura si esta linea no esta comentada.
+            // this.caja.add(pokemon);
             return true;
         } else {
             System.out.println("El Pokemon no ha sido capturado");
