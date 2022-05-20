@@ -1,9 +1,20 @@
 package pokemon;
+/**
+ * Esta es la clase pokemon con todos los atributos, métodos get y set, el método subir de nivel, método atacar, y el método ventaja.
+ *
+ * @author Pedro y Jaime
+ * @version 1.0
+ */
 
 import java.util.Random;
 
 public class Pokemon {
 
+/**
+ * Los atributos de los Pokemon
+ */
+
+    private int ID;
     private String nombre;
     private String mote;
     private int vitalidad;
@@ -33,6 +44,8 @@ public class Pokemon {
             int defEspecial, int velocidad, int estamina, int nivel, int fertilidad, Movimiento[] arrayMovimiento,
             TipoEnum tipo, Estado estado) {
 
+            
+
         this.nombre = nombre;
         this.mote = mote;
         this.vitalidad = vitalidad;
@@ -51,6 +64,10 @@ public class Pokemon {
     }
 
     public Pokemon(int i, String string, String string2, String string3) {
+    }
+
+    public int getID() {
+        return ID;
     }
 
     public Movimiento[] getMovimientosDisponibles() {
@@ -153,6 +170,10 @@ public class Pokemon {
         this.movimientosDisponibles = movimientosDisponibles;
     }
 
+    public void setID(int iD) {
+        ID = iD;
+    }
+
     public void setExperiencia(int experiencia) {
         this.experiencia = experiencia;
     }
@@ -244,7 +265,9 @@ public class Pokemon {
     public void setFertilidadAct(int fertilidadAct) {
         this.fertilidadAct = fertilidadAct;
     }
-
+/**
+ * El método subir de nivel hace que el Pokemon suba de nivel y cada vez que sube de nivel aumenten las estadísticas del Pokemon
+ */
     public void subirNivel() {
 
         Random rnd = new Random();
@@ -269,49 +292,51 @@ public class Pokemon {
         }
 
     }
-
+/**
+ * El método atacar para que un Pokemon quite vida a otro cuando le ataque.
+ * @param pokemonAAtacar
+ * @param movimientoAUsar
+ */
     public void atacar(Pokemon pokemonAAtacar, Movimiento movimientoAUsar) {
 
         int vitalidadAQuitar;
-
-        
 
         if (this.estamina > movimientoAUsar.getEstamina()) {
 
             if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.VENTAJA) {
 
-                vitalidadAQuitar = (int) (pokemonAAtacar.getVitalidad() - (this.getAtaqueAct() * 1.5) + ataque
-                        - defensa);
+                vitalidadAQuitar = (int) ((this.ataque - pokemonAAtacar.getDefensa())*1.5 + movimientoAUsar.potenciaAtaque);
+                        
 
                 pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
 
             }
-
-            else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.NEUTRO) {
-
-                vitalidadAQuitar = pokemonAAtacar.getVitalidad() - (this.getAtaqueEspecialAct()) + ataque
-                        - defensa;
-
-                pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
-
-            }
-
-            else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.DESVENTAJA) {
-
-                vitalidadAQuitar = (int) (pokemonAAtacar.getVitalidad() - (this.getAtaqueEspecialAct() * 0.5) + ataque
-                        - defensa);
-
-                pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
-
-            }
-
 
         }
 
-         
+        else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.NEUTRO) {
 
+            vitalidadAQuitar = (int) ((this.ataque - pokemonAAtacar.getDefensa()) + movimientoAUsar.potenciaAtaque);
+
+            pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
+
+        }
+
+        else if (this.ventajaODesventaja(pokemonAAtacar) == Ventaja.DESVENTAJA) {
+
+            vitalidadAQuitar = (int) ((this.ataqueAct - pokemonAAtacar.getDefensa())* 0.5 + movimientoAUsar.potenciaAtaque);
+
+            pokemonAAtacar.vitalidad = pokemonAAtacar.vitalidad - vitalidadAQuitar;
+
+        }
     }
 
+
+/**
+ * Este método ventaja hace que un Pokemon tenga ventaja o desventaja sobre otro dependiendo del tipo que sea, y asi hace mas daño o menos.
+ * @param pokemonRival
+ * @return
+ */
     public Ventaja ventajaODesventaja(Pokemon pokemonRival) {
 
         if (this.getTipo() == TipoEnum.AGUA && pokemonRival.getTipo() == TipoEnum.FUEGO) {
@@ -407,7 +432,9 @@ public class Pokemon {
         }
 
     }
-
+/**
+ * Este método descansar lo utilizaremos para recuperar la estamina.
+ */
     public void descansar() {
 
         // Recupera la estamina a la estamina base.

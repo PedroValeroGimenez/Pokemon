@@ -1,4 +1,9 @@
 package pokemon;
+/**
+ * Esta es la clase de los movimientos de ataque, con sus atributos
+ * @author Pedro y Jaime
+ * @version 1.0
+ */
 
 public class MovAtaque extends Movimiento {
 

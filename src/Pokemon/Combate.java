@@ -1,4 +1,9 @@
 package pokemon;
+/**
+ * Esta es la clase combate que se usara para que los Pokemon luchen.
+ * @author Pedro y Jaime
+ * @version 1.0
+ */
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -12,6 +17,9 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class Combate {
+    /**
+     * Estos son los atributos de la clase combate
+     */
 
     public static final String PATH = "./log/combate.log";
     private Entrenador entrenador;
@@ -29,6 +37,9 @@ public class Combate {
         this.entrenador = entrenador;
         this.rival = rival;
         this.turnos = new LinkedList<>();
+        /**
+         * El constructor de la clase combate
+         */
 
         /*
          * crear random
@@ -43,7 +54,13 @@ public class Combate {
          * rival[i] = pokemon1;
          * }
          */
+
+
+        
     }
+        /**
+         * Los métodos get y set de todos los atributos
+         */
 
     public Entrenador getEntrenador() {
         return entrenador;
@@ -77,6 +94,10 @@ public class Combate {
         this.rival = rival;
     }
 
+    /**
+     * El método para almacenar todos los kos de los Pokemon
+     */
+
     public void koCombate() {
         if (this.koEntrenador == 4) {
             rival = ganador;
@@ -85,23 +106,37 @@ public class Combate {
 
         }
     }
+    /**
+     * El método retirarse, que al retirarnos del combate termina el combate y perdemos el 33% de nuestro dinero.
+     * @param miEntrenador
+     */
 
     public void retirarse(Entrenador miEntrenador) {
         miEntrenador.setPokeDollar((int) (miEntrenador.getPokeDollar() - miEntrenador.getPokeDollar() * 0.33));
     }
-
+/**
+ * El método para gana experiencia, suma los niveles de ambos Pokemon los multiplica por 10 y divide el resultadop entre 4.
+ */
     public void ganarExp() {
         mipokemon.setNivel((mipokemon.getNivel() + pokemonrival.getNivel() * 10) / 4);
     }
 
+    /**
+     * El método combate que crea una lista donde van los turnos.
+     */
+
     public Combate() {
         turnos = new LinkedList<>();
     }
-
+/**
+ * Este método añade un turno
+ */
     public void addTurno(Turno turno) {
         this.turnos.add(turno);
     }
-
+/**
+ * Este método escribe en el fichero de la carpeta log lo que hacemos en el combate
+ */
     public void escribirCombate() {
 
         File fichero = new File(PATH);

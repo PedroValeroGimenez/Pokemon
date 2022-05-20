@@ -1,6 +1,16 @@
 package pokemon;
+/**
+ * Esta es la clase movimiento
+ */
 
 public class MovMejora extends Movimiento {
+    /**
+     * Estos son los atributos de la clase movimientos con su constructor.
+     * @param nombreMovimiento
+     * @param potenciaAtaque
+     * @param tipoMovimiento
+     * @param estamina
+     */
 
     public MovMejora(String nombreMovimiento, int potenciaAtaque, TipoEnum tipoMovimiento, int estamina) {
         super(nombreMovimiento, potenciaAtaque, tipoMovimiento, estamina);

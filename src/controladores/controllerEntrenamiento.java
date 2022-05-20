@@ -27,7 +27,7 @@ public class ControllerEntrenamiento implements Initializable {
     MediaPlayer mediaPlayer;
 
     public void play() {
-        String s = "C:/Users/jaime/Desktop/DAM/Proyecto Pokemon/Pokemon-1/lib/entrenamiento.mp3";
+        String s = "img/entrenamiento.mp3";
         Media h = new Media(Paths.get(s).toUri().toString());
         mediaPlayer = new MediaPlayer(h);
         mediaPlayer.play();
@@ -49,6 +49,9 @@ public class ControllerEntrenamiento implements Initializable {
     private Button EntrenamientoFuncional;
     @FXML
     private Button EntrenamientoOnirico;
+
+    @FXML
+    private Button EntrenamientoPesado;
 
     private Pokemon miPokemon;
     private Entrenador entrenador;
@@ -117,6 +120,19 @@ public class ControllerEntrenamiento implements Initializable {
         System.out.println("\n");
 
     }
+
+    @FXML
+
+    private void entrenamientoPesado(ActionEvent event) throws IOException {
+
+        entrenador.entrenamientoPesado(miPokemon);
+
+        txStats.setText("Las Stats de " + miPokemon.getNombre() + " son :" + " Defensa :"
+                + miPokemon.getDefensa() + " Defensa Especial : " + miPokemon.getDefEspecial() +  " Vitalidad : " + miPokemon.getVitalidad());
+
+
+    }
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

@@ -45,7 +45,7 @@
          <children>
             <ImageView fitHeight="479.0" fitWidth="789.0" layoutX="-7.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@escenario.png" />
+                  <Image url="@../../../img/escenario.png" />
                </image>
             </ImageView>
             <AnchorPane layoutX="260.0" layoutY="282.0" prefHeight="142.0" prefWidth="504.0">
@@ -58,14 +58,14 @@
                   <Button fx:id="btnMov4" layoutX="151.0" layoutY="71.0" mnemonicParsing="false" opacity="0.0" prefHeight="48.0" prefWidth="106.0" text="Button" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="318.0" fitWidth="300.0" layoutX="22.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="198.0" fitWidth="189.0" layoutX="85.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Empoleon_espalda_G5.gif" />
+                  <Image url="@../../../img/back/25.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="252.0" fitWidth="300.0" layoutX="438.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="252.0" fitWidth="300.0" layoutX="462.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@09237126-bf44-4031-8a88-792a21ad2e03.gif" />
+                  <Image url="@../../../img/7.png" />
                </image>
             </ImageView>
             <TextField fx:id="txLog" layoutX="38.0" layoutY="414.0" prefHeight="38.0" prefWidth="726.0" />
@@ -73,7 +73,7 @@
             <Button fx:id="stop" layoutX="116.0" layoutY="36.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
             <ImageView fitHeight="38.0" fitWidth="50.0" layoutX="13.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../menuPokemon/Play-Button-PNG-Transparent-Image.png" />
+                  <Image url="@../../../img/Play-Button-PNG-Transparent-Image.png" />
                </image>
             </ImageView>
          </children>

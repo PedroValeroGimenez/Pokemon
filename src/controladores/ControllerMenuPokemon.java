@@ -25,7 +25,7 @@ public class ControllerMenuPokemon implements Initializable {
     MediaPlayer mediaPlayer;
 
 	public void musicPlay() {
-		String s = "C:/Users/jaime/Desktop/DAM/Proyecto Pokemon/Pokemon-1/lib/pokemon.mp3";
+		String s = "img/pokemon.mp3";
 		Media h = new Media(Paths.get(s).toUri().toString());
 		mediaPlayer = new MediaPlayer(h);
 		mediaPlayer.play();
@@ -72,7 +72,7 @@ public class ControllerMenuPokemon implements Initializable {
                 getClass().getResource("../vistas/vistaEntrenamiento/vistaEntrenamiento.fxml"));
         Parent root = loader.load();
 
-        ControllerEntrenamiento corntrolador = loader.getController();
+        ControllerEntrenamiento controlador = loader.getController();
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();

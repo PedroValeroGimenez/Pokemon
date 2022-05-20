@@ -3,7 +3,12 @@ package controladores;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,16 +28,19 @@ import pokemon.Entrenador;
 import pokemon.Movimiento;
 import pokemon.Pokemon;
 import pokemon.TipoEnum;
+import pokemon.MainPrueba;
+import pokemon.Combate;
 
 public class ControllerCombate implements Initializable {
 
     MediaPlayer mediaPlayer;
 
     public void play() {
-        String s = "C:/Users/jaime/Desktop/DAM/Proyecto Pokemon/Pokemon-1/lib/combate.mp3";
+        String s = "img/combate.mp3";
         Media h = new Media(Paths.get(s).toUri().toString());
         mediaPlayer = new MediaPlayer(h);
         mediaPlayer.play();
+
     }
 
     public void stop() {
@@ -72,50 +80,76 @@ public class ControllerCombate implements Initializable {
     private Pokemon rivalPokemon;
     private Movimiento movPrueba;
     private Entrenador entrenador;
-
-    
+    private int contadorRival;
+    private int contador;
 
     @FXML
 
     private void Atacar(ActionEvent event) throws IOException {
 
-        // miPokemon.atacar(rivalPokemon, movPrueba);
-        
+        if (contador < 3 && contadorRival < 3) {
 
-        this.btnAtacar.setVisible( false );
-        this.btnHuir.setVisible( true );
+            if (miPokemon.getVitalidad() > 0 && rivalPokemon.getVitalidad() > 0) {
 
-        this.btnMov1.setOpacity(1);
-        this.btnMov2.setOpacity(1);
-        this.btnMov3.setOpacity(1);
-        this.btnMov4.setOpacity(1);
-        
+                miPokemon.atacar(rivalPokemon, movPrueba);
 
-        //txLog.setText("La vitalidad de " + rivalPokemon.getNombre() + " es " + rivalPokemon.getVitalidad());
+                this.btnAtacar.setVisible(true);
+                this.btnHuir.setVisible(true);
+
+            }
+
+            else if (miPokemon.getVitalidad() < 0) {
+                contador++;
+                // TODOS LOS POKEMON TIENEN 100 DE VIDA
+                miPokemon.setVitalidad(100);
+            }
+
+            if (rivalPokemon.getVitalidad() > 0 && miPokemon.getVitalidad() > 0) {
+
+                rivalPokemon.atacar(miPokemon, movPrueba);
+
+            }
+
+            else if (rivalPokemon.getVitalidad() < 0) {
+                contadorRival++;
+                // TODOS LOS POKEMON TIENEN 100 DE VIDA
+                rivalPokemon.setVitalidad(100);
+            }
+
+            txLog.setText("La vitalidad de " + miPokemon.getNombre() + " es de: " +
+                    miPokemon.getVitalidad() + " y la vitalidad de " + rivalPokemon.getNombre() + " es de : "
+                    + rivalPokemon.getVitalidad() + " llevas " + contador + " ko`s" + " y tu rival " + contadorRival
+                    + " ko`s");
+
+            combate.escribirCombate();
+
+        } else {
+            txLog.setText("El combate ha terminado");
+        }
 
     }
 
     @FXML
 
-    private void Huir(ActionEvent event) throws IOException {
+    private void Huir(ActionEvent event) throws IOException, InterruptedException {
 
         combate.retirarse(entrenador);
 
         txLog.setText("Entrenador " + entrenador.getNombre() + " se ha retirado del combate " + "\n"
-                + "tus pokedolares actuales son " + entrenador.getPokeDollar());
+          + "tus pokedolares actuales son " + entrenador.getPokeDollar());
+
 
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        
-
-        miPokemon = new Pokemon("pikachu", null, 100, 0, 0, 0, 0, 0, 200, 0, 0, null, null, null);
-        rivalPokemon = new Pokemon("Squirtle", null, 200, 0, 0, 0, 0, 0, 200, 0, 0, null, null, null);
-        movPrueba = new Movimiento("Pistola agua", 20, TipoEnum.AGUA, 50);
+        miPokemon = new Pokemon("pikachu", null, 200, 60, 20, 0, 0, 0, 200, 0, 0, null, null, null);
+        rivalPokemon = new Pokemon("Squirtle", null, 200, 38, 20, 0, 0, 0, 200, 0, 0, null, null, null);
+        movPrueba = new Movimiento("Pistola agua", 5, TipoEnum.AGUA, 50);
         entrenador = new Entrenador(null, null, "Jaime", 20000);
         combate = new Combate();
+
     }
 
 }

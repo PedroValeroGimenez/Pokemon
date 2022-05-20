@@ -42,20 +42,25 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="body" stylesheets="@style.css" VBox.vgrow="ALWAYS">
          <children>
+            <ImageView fitHeight="404.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Menu.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="btnEntrenamiento" layoutX="21.0" layoutY="219.0" mnemonicParsing="false" onAction="#Entrenamiento" prefHeight="38.0" prefWidth="108.0" text="Entrenamiento" />
             <ImageView fitHeight="38.0" fitWidth="269.0" layoutX="217.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@haztePro.png" />
+                  <Image url="@../../../img/haztePro.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="170.0" fitWidth="389.0" layoutX="126.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pokemon.gif" />
+                  <Image url="@../../../img/pokemon.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="208.0" fitWidth="225.0" layoutX="227.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pikachu.gif" />
+                  <Image url="@../../../img/pikachu.gif" />
                </image>
             </ImageView>
             <Button fx:id="btnCombate" layoutX="21.0" layoutY="276.0" mnemonicParsing="false" onAction="#Combate" prefHeight="38.0" prefWidth="108.0" text="Combate" />
@@ -64,7 +69,7 @@
             <Button fx:id="stop" layoutX="117.0" layoutY="24.0" mnemonicParsing="false" onAction="#stop" prefHeight="26.0" prefWidth="47.0" text="Stop" />
             <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Play-Button-PNG-Transparent-Image.png" />
+                  <Image url="@../../../img/Play-Button-PNG-Transparent-Image.png" />
                </image>
             </ImageView>
          </children>

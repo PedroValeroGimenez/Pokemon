@@ -1,4 +1,9 @@
 package pokemon;
+/**
+ * Esta es la clase turno con los métodos get y set.
+ * @author Jaime y Pedro
+ * @version 1.0
+ */
 
 public class Turno {
     private int turno;

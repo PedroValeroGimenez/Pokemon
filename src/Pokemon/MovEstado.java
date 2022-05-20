@@ -1,4 +1,7 @@
 package pokemon;
+/**
+ * Esta es la clase de los movimientos de estado, con los métodos get y set y los atributos.
+ */
 
 public class MovEstado extends Movimiento {
 

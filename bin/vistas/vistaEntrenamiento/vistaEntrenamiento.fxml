@@ -43,27 +43,33 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="body" stylesheets="@style.css" VBox.vgrow="ALWAYS">
          <children>
+            <ImageView fitHeight="403.0" fitWidth="726.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/Fondo.jpeg" />
+               </image>
+            </ImageView>
             <ImageView fitHeight="58.0" fitWidth="300.0" layoutX="260.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@bocadilloDeTexto.gif" />
+                  <Image url="@../../../img/bocadilloDeTexto.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="203.0" fitWidth="231.0" layoutX="205.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@oak.gif" />
+                  <Image url="@../../../img/oak.gif" />
                </image>
             </ImageView>
-            <Button fx:id="btnEntrenamientoFurioso" layoutX="46.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoFurioso" prefHeight="57.0" prefWidth="138.0" text="EntrenamientoFurioso" />
-            <Button fx:id="btnEntrenamientoFuncional" layoutX="248.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoFuncional" prefHeight="57.0" prefWidth="145.0" text="EntrenamientoFuncional" />
-            <Button fx:id="btnEntrenamientoOnirico" layoutX="442.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoOnirico" prefHeight="57.0" prefWidth="145.0" text="EntrenamientoOnirico" />
+            <Button fx:id="btnEntrenamientoFurioso" layoutX="32.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoFurioso" prefHeight="57.0" prefWidth="138.0" text="EntrenamientoFurioso" />
+            <Button fx:id="btnEntrenamientoFuncional" layoutX="205.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoFuncional" prefHeight="57.0" prefWidth="145.0" text="EntrenamientoFuncional" />
+            <Button fx:id="btnEntrenamientoOnirico" layoutX="371.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoOnirico" prefHeight="57.0" prefWidth="145.0" text="EntrenamientoOnirico" />
             <TextField fx:id="txStats" layoutX="19.0" layoutY="33.0" prefHeight="26.0" prefWidth="602.0" />
             <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="14.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../menuPokemon/Play-Button-PNG-Transparent-Image.png" />
+                  <Image url="@../../../img/Play-Button-PNG-Transparent-Image.png" />
                </image>
             </ImageView>
             <Button fx:id="play" layoutX="55.0" layoutY="94.0" mnemonicParsing="false" onAction="#play" text="Play" />
             <Button fx:id="stop" layoutX="101.0" layoutY="94.0" mnemonicParsing="false" onAction="#stop" prefHeight="26.0" prefWidth="57.0" text="Stop" />
+            <Button fx:id="btnEntrenamientoPesado" layoutX="528.0" layoutY="312.0" mnemonicParsing="false" onAction="#entrenamientoPesado" prefHeight="58.0" prefWidth="138.0" text="EntrenamientoPesado" />
          </children>
     </AnchorPane>
   </children>

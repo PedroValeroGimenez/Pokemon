@@ -1,6 +1,11 @@
 package pokemon;
 
 public class Movimiento {
+    /**
+     * Esta es la clase movimiento, con sus atributos y métodos get y set.
+     * @author Pedro y Jaime
+     * @version 1.0
+     */
 
     private String nombreMovimiento;
     protected int potenciaAtaque;
